@@ -2,5 +2,5 @@ module.exports = {
   siteMetadata: {
     title: "personal-website",
   },
-  plugins: ["gatsby-plugin-styled-components"],
+  plugins: ["gatsby-plugin-typescript", "gatsby-plugin-styled-components"],
 };
