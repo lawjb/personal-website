@@ -1,12 +1,14 @@
 import * as React from "react";
 import { Link } from "gatsby";
 
+import { Layout } from "../components";
+
 const NotFoundPage = () => {
   return (
-    <div>
+    <Layout>
       <h1>Page not found. Sorry!</h1>
       <Link to="/">Go home</Link>.
-    </div>
+    </Layout>
   );
 };
 
