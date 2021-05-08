@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { Turn as Hamburger } from "hamburger-react";
 
-import Button from "./button";
+import Link from "./link";
 import { useGitHubUser } from "../data";
 import { color, spacing } from "../utils";
 
@@ -37,8 +37,8 @@ const Navbar = ({ className }: Props) => {
       </Row>
       {isOpen && (
         <Row mg={3}>
-          <Button>About</Button>
-          <Button>Blog</Button>
+          <Link to="/">About</Link>
+          <Link to="/blog">Blog</Link>
         </Row>
       )}
     </nav>

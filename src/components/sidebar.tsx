@@ -11,7 +11,7 @@ import {
   FaInstagram,
 } from "react-icons/fa";
 
-import Button from "./button";
+import Link from "./link";
 import { useGitHubUser } from "../data";
 import { color, spacing } from "../utils";
 
@@ -42,7 +42,7 @@ const ContactDetail = styled.div`
   }
 `;
 
-const Link = styled.a`
+const ExternalLink = styled.a`
   display: flex;
   align-items: center;
   color: ${color("primary")};
@@ -63,8 +63,8 @@ const Sidebar = ({ className }: Props) => {
       <Avatar src={my.avatarUrl} />
       <h1>{my.name}</h1>
       <Row>
-        <Button>About</Button>
-        <Button>Blog</Button>
+        <Link to="/">About</Link>
+        <Link to="/blog">Blog</Link>
       </Row>
       <CenterAlignedText>{my.bio}</CenterAlignedText>
       <div>
@@ -78,25 +78,25 @@ const Sidebar = ({ className }: Props) => {
         </ContactDetail>
         <ContactDetail>
           <FaRegEnvelope size="1.2rem" title="Email address" />
-          <Link href={`mailto:${my.email}`}>{my.email}</Link>
+          <ExternalLink href={`mailto:${my.email}`}>{my.email}</ExternalLink>
         </ContactDetail>
       </div>
       <Row>
-        <Link href={my.url}>
+        <ExternalLink href={my.url}>
           <FaGithub size="1.2rem" title="GitHub" />
-        </Link>
-        <Link href="https://www.linkedin.com/in/lawrencejb/">
+        </ExternalLink>
+        <ExternalLink href="https://www.linkedin.com/in/lawrencejb/">
           <FaLinkedin size="1.2rem" title="LinkedIn" />
-        </Link>
-        <Link href="https://stackoverflow.com/users/13417313">
+        </ExternalLink>
+        <ExternalLink href="https://stackoverflow.com/users/13417313">
           <FaStackOverflow size="1.2rem" title="Stack Overflow" />
-        </Link>
-        <Link href="https://twitter.com/lawrencejberry">
+        </ExternalLink>
+        <ExternalLink href="https://twitter.com/lawrencejberry">
           <FaTwitter size="1.2rem" title="Twitter" />
-        </Link>
-        <Link href="https://www.instagram.com/lawrencejberry">
+        </ExternalLink>
+        <ExternalLink href="https://www.instagram.com/lawrencejberry">
           <FaInstagram size="1.2rem" title="Instagram" />
-        </Link>
+        </ExternalLink>
       </Row>
     </div>
   );
