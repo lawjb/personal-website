@@ -105,7 +105,7 @@ export default styled(Sidebar)`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  border-right: 1px solid ${color("outline")};
+  box-shadow: 1px 0 2px ${color("outline")};
   padding: ${spacing(6)} ${spacing(5)};
   background-color: ${color("background")};
 
