@@ -59,7 +59,7 @@ const Sidebar = ({ className }: Props) => {
   const { viewer: my } = useGitHubUser();
 
   return (
-    <div className={className}>
+    <nav className={className}>
       <Avatar src={my.avatarUrl} />
       <h1>{my.name}</h1>
       <Row>
@@ -98,7 +98,7 @@ const Sidebar = ({ className }: Props) => {
           <FaInstagram size="1.2rem" title="Instagram" />
         </ExternalLink>
       </Row>
-    </div>
+    </nav>
   );
 };
 
