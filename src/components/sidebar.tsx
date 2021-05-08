@@ -43,6 +43,8 @@ const ContactDetail = styled.div`
 `;
 
 const Link = styled.a`
+  display: flex;
+  align-items: center;
   color: ${color("primary")};
 
   &:hover {
