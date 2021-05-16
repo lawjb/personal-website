@@ -35,15 +35,20 @@ module.exports = {
                           updatedAt
                           url
                           websiteUrl
-                          repositories(privacy: PUBLIC, orderBy: {field: UPDATED_AT, direction: DESC}, first: 100, ownerAffiliations: OWNER) {
+                          repositories(privacy: PUBLIC, orderBy: {field: PUSHED_AT, direction: DESC}, first: 100, ownerAffiliations: OWNER, isFork: false) {
                             nodes {
                               description
                               homepageUrl
-                              nameWithOwner
                               pushedAt
                               stargazerCount
                               url
-                              updatedAt
+                              name
+                              languages(first: 3, orderBy: {field: SIZE, direction: DESC}) {
+                                nodes {
+                                  color
+                                  name
+                                }
+                              }
                             }
                           }
                         }

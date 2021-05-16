@@ -17,6 +17,22 @@ export const useGitHubUser = () => {
               url
               websiteUrl
               avatarUrl
+              repositories {
+                nodes {
+                  description
+                  homepageUrl
+                  pushedAt
+                  stargazerCount
+                  url
+                  name
+                  languages {
+                    nodes {
+                      color
+                      name
+                    }
+                  }
+                }
+              }
             }
           }
         }

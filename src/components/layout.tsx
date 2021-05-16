@@ -13,7 +13,7 @@ const Content = styled.main`
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  padding: 0 ${spacing(5)};
+  padding: 0 ${spacing(5)} ${spacing(5)} ${spacing(5)};
   background-color: ${color("content")};
 `;
 
