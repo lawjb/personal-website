@@ -7,8 +7,8 @@ import {
   FaMapMarkerAlt,
   FaLinkedin,
   FaTwitter,
-  FaStackOverflow,
   FaInstagram,
+  FaYoutube,
 } from "react-icons/fa";
 
 import Link from "./link";
@@ -53,6 +53,19 @@ const ExternalLink = styled.a`
   }
 `;
 
+const Emoji = styled.span`
+  margin: 0 ${spacing(2)};
+  letter-spacing: ${spacing(2)};
+`;
+
+const Bio = () => (
+  <CenterAlignedText>
+    Anglo-Dutch <Emoji>🇬🇧🇳🇱</Emoji> • Software engineer <Emoji>💻</Emoji> •
+    Bookworm <Emoji>📚🪱</Emoji> • Film fanatic <Emoji>🍿</Emoji> • Traveller{" "}
+    <Emoji>🌎</Emoji> • Pianist <Emoji>🎹</Emoji>
+  </CenterAlignedText>
+);
+
 type Props = { className?: string };
 
 const Sidebar = ({ className }: Props) => {
@@ -66,7 +79,7 @@ const Sidebar = ({ className }: Props) => {
         <Link to="/">About</Link>
         <Link to="/blog">Blog</Link>
       </Row>
-      <CenterAlignedText>{my.bio}</CenterAlignedText>
+      <Bio />
       <div>
         <ContactDetail>
           <FaRegBuilding size="1.2rem" title="Company" />
@@ -85,17 +98,17 @@ const Sidebar = ({ className }: Props) => {
         <ExternalLink href={my.url}>
           <FaGithub size="1.2rem" title="GitHub" />
         </ExternalLink>
-        <ExternalLink href="https://www.linkedin.com/in/lawrencejb/">
+        <ExternalLink href="https://www.linkedin.com/in/lawrencejberry">
           <FaLinkedin size="1.2rem" title="LinkedIn" />
-        </ExternalLink>
-        <ExternalLink href="https://stackoverflow.com/users/13417313">
-          <FaStackOverflow size="1.2rem" title="Stack Overflow" />
         </ExternalLink>
         <ExternalLink href="https://twitter.com/lawrencejberry">
           <FaTwitter size="1.2rem" title="Twitter" />
         </ExternalLink>
         <ExternalLink href="https://www.instagram.com/lawrencejberry">
           <FaInstagram size="1.2rem" title="Instagram" />
+        </ExternalLink>
+        <ExternalLink href="https://www.youtube.com/channel/UC7gVUWUEpjAvI5-de0KDaJg/featured">
+          <FaYoutube size="1.2rem" title="YouTube" />
         </ExternalLink>
       </Row>
     </nav>
