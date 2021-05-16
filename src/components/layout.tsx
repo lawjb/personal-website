@@ -8,13 +8,12 @@ import { color, spacing, lightTheme } from "../utils";
 const SIDEBAR_WIDTH = "380px";
 const MOBILE_BREAKPOINT = "768px";
 
-const Content = styled.div`
-  position: fixed;
+const Content = styled.main`
+  position: absolute;
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  width: 100%;
-  padding: ${spacing(5)};
+  padding: 0 ${spacing(5)} ${spacing(5)} ${spacing(5)};
   background-color: ${color("content")};
 `;
 
@@ -50,8 +49,9 @@ export default styled(Layout)`
     }
 
     ${Content} {
-      position: fixed;
+      position: absolute;
       left: ${SIDEBAR_WIDTH};
+      right: 0;
       z-index: 1;
     }
   }
