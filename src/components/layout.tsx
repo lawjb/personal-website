@@ -9,7 +9,7 @@ const SIDEBAR_WIDTH = "380px";
 const MOBILE_BREAKPOINT = "768px";
 
 const Content = styled.main`
-  position: fixed;
+  position: absolute;
   display: flex;
   flex-direction: column;
   min-height: 100%;
@@ -49,7 +49,7 @@ export default styled(Layout)`
     }
 
     ${Content} {
-      position: fixed;
+      position: absolute;
       left: ${SIDEBAR_WIDTH};
       right: 0;
       z-index: 1;
